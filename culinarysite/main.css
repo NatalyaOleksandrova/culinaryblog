@@ -1,0 +1,473 @@
+
+*, *:after, *:before{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  -moz-transition: .5s ease-in-out;
+  -o-transition: .5s ease-in-out;
+  -webkit-transition: .5s ease-in-out;
+  -ms-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+}
+/* Body
+---------------------------------------------------------------------- */
+body {
+  font-family: 'Muli', sans-serif;
+  font-size: 18px;
+  line-height: 1.5;
+  background: radial-gradient(#ffaf2f 2px, transparent 1px);
+  -webkit-background-size: 20px 20px;
+	-moz-background-size: 20px 20px;
+  background-size: 20px 20px;
+}
+/* End of Body
+---------------------------------------------------------------------- */
+
+/* The General
+---------------------------------------------------------------------- */
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  outline: none;
+}
+.container{
+  width: 100%;
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+/* End of The General
+---------------------------------------------------------------------- */
+
+/* HEADER
+----------------------------------------------------------------------*/
+
+header{
+  background: white;
+  margin-bottom: 20px;
+}
+.container-wrap{
+display: flex;
+align-items: center;
+justify-content: space-between;
+padding: 20px 0;
+position: relative;
+}
+/* Logo
+----------------------------------------------------------------------*/
+.logo span{
+  display: inline-block;
+  width:30px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  border-radius: 50%;
+  color: white;
+  box-shadow: 3px 2px 1px rgba(0, 0, 0, 0.5);
+  text-shadow: 1px 2px 0 rgba(0, 0, 0, 0.3);
+}
+.logo span:nth-child(odd){background:#b08c5d; }
+.logo span:nth-child(even){background:#e39632;}
+
+/* End OF Logo
+----------------------------------------------------------------------*/
+
+/*MEDIA QUERIES   for Logo
+----------------------------------------------------------------------*/
+@media (max-width: 320px){
+.logo span{
+  width:19px;
+  height: 19px;
+  line-height: 19px;
+}
+}
+/*End OF MEDIA QUERIES for Logo
+----------------------------------------------------------------------*/
+
+
+/* Menu
+----------------------------------------------------------------------*/
+.menu{
+  float:right;
+}
+.menu li{
+  display: inline-block;
+  margin-right: 20px;
+}
+.menu a{
+  color:#4a1f1f;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+  text-transform: uppercase;
+  font-weight: bold;
+  display: block;
+  line-height: 40px;
+}
+ .menu a:hover {
+  color: #EF5A42;
+}
+/* End OF MENU
+---------------------------------------------------------------------- */
+
+/* BURGER
+---------------------------------------------------------------------- */
+.burger{
+display: none;
+position: relative;
+float: right;
+width: 50px;
+height: 40px;
+margin-right: 20px;
+background-color: transparent;
+}
+.burger span{
+display: block;
+position: absolute;
+top: 19px;
+left: 8px;
+right: 8px;
+height: 3px;
+background: grey;
+}
+.burger span:before, .burger span:after{
+content: "";
+position: absolute;
+display: block;
+left: 0;
+width: 100%;
+height: 3px;
+background: grey;
+}
+.burger span:before{
+  top: -10px;
+}
+.burger span:after{
+  bottom:-10px;
+}
+.menu.active{
+  max-height: 123px;
+}
+/*  End OF  BURGER
+---------------------------------------------------------------------- */
+
+
+/*  MEDIA QUERIES   for MENU and BURGER
+----------------------------------------------------------------------   */
+@media (max-width: 768px){
+.burger{
+display: block;
+}
+header {
+padding: 10px 0;
+}
+.menu {
+max-height: 0;
+background: white;
+float: none;
+position: absolute;
+overflow: hidden;
+top: 63px;
+right: 0;
+left: 0;
+margin: 0;
+padding: 0;
+z-index: 3;
+}
+.menu li {
+display: block;
+text-align: center;
+border-bottom: 1px solid #EBEBE3;
+margin-right: 0;
+}
+}
+
+/*  End OF MEDIA QUERIES  for MEENU and BURGER
+----------------------------------------------------------------------   */
+
+
+/* MAIN CONTENT
+----------------------------------------------------------------------    */
+
+.p{
+  max-width:1120px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.inner-item{
+  margin-top: 70px;
+  padding: 20px;
+}
+#block1, #block2, #block3{
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  box-shadow: 0 0 5px rgba(0, 0, 0, .2);
+  background: black;
+  color: white;
+}
+ #block1 img, #block2 img, #block3 img{
+  display: block;
+  width: 100%;
+  height: 300px;
+  opacity: .75;
+  position: relative;
+}
+ #block1:hover img, #block2:hover img, #block3:hover img{
+   opacity: 0.45;
+   -moz-transform: scale(1.1);
+ 	-o-transform: scale(1.1);
+ 	-webkit-transform: scale(1.1);
+ 	-ms-transform: scale(1.1);
+   transform: scale(1.1);
+}
+#block1 .description h4, #block2 .description h4, #block3 .description h4{
+position: absolute;
+top:50%;
+color:white;
+font-size: 24px;
+opacity: 0;
+-moz-transform: translateY(-50%);
+-o-transform: translateY(-50%);
+-webkit-transform: translateY(-50%);
+-ms-transform: translateY(-50%);
+transform: translateY(-50%);
+}
+#block1 h4{
+left: 32%;
+}
+#block2 h4{
+  left: 38%;
+}
+#block3 h4{
+  left: 40%;
+}
+#block1:hover .description h4, #block2:hover .description h4, #block3:hover .description h4{
+  opacity:1;
+}
+/* End OF MAIN CONTENT
+----------------------------------------------------------------------         */
+
+
+/*MEDIA QUERIES for MAIN CONTENT
+----------------------------------------------------------------------         */
+@media (min-width:768px ) {
+.inner-item {
+		flex-basis: 30%;
+	}
+}
+@media (max-width:320px ) {
+.inner-item {
+		flex-basis: 100%;
+	}
+}
+/*End OF MEDIA QUERIES for MAIN CONTENT
+----------------------------------------------------------------------        */
+
+/*ABOUT
+----------------------------------------------------------------------        */
+.about{
+  margin-top: 150px;
+  height: 400px;
+}
+.content h2, .content p{
+  padding: 10px 50px;
+  background: #dae0e0;
+
+}
+.about h2{
+  padding: 35px 20px;
+}
+.about p{
+  font-size: 15px;
+ margin: 0;
+ line-height: 2;
+}
+/*END OF ABOUT
+----------------------------------------------------------------------        */
+
+/* MEDIA QUERIES for ABOUT
+----------------------------------------------------------------------       */
+@media (max-width:320px ) {
+  .about{
+  margin-top: 100px;
+}
+.content {
+		font-size: 10px;
+    text-align: center;
+	}
+  .content p{
+    padding-bottom: 20px;
+  margin-bottom: 30px;
+  }
+}
+/*End OF MEDIA QUERIES for ABOUT
+----------------------------------------------------------------------  */
+
+
+/*FORM
+----------------------------------------------------------------------   */
+.contact{
+  margin-bottom: 150px;
+  height: 550px;
+}
+form{
+  margin: 30px 0;
+}
+.contact h2{
+  text-align: center;
+  padding: 10px 0;
+  color:#610b25;
+  text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.5);
+}
+input,textarea,button{
+  margin: 0 auto;
+  width:370px;
+  display: block;
+  padding: 18px;
+  border-radius: 5px;
+  border:2px solid grey;
+  outline: none;
+}
+input{
+  line-height: 15px;
+  margin-bottom: 10px;
+}
+button{
+  background: orange;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-top: 20px;
+  font-size: 18px;
+}
+button:hover{
+  background: #cf481f;
+  color:white;
+}
+/* END OF FORM
+----------------------------------------------------------------------   */
+
+/* MEDIA QUERIES for FORM
+----------------------------------------------------------------------       */
+@media (max-width:425px ) {
+
+input,textarea,button{
+		  width:330px;
+      padding: 13px;
+	}
+  .contact h2{
+    font-size: 18px;
+  }
+}
+@media (max-width:375px ) {
+  .contact{
+    height: 400px;
+  }
+  .contact h2{
+    margin-top: 50px;
+  }
+}
+@media (max-width:320px ) {
+
+input,textarea,button{
+		  width:230px;
+      padding: 13px;
+	}
+  .contact h2{
+
+    font-size: 18px;
+  }
+}
+/* END OF MEDIA QUERIES for FORM
+----------------------------------------------------------------------       */
+
+
+/*FOOTER
+----------------------------------------------------------------------        */
+footer{
+  height: 90px;
+  background: #e0dede;
+}
+p{
+  float:left;
+  line-height: 90px;
+  margin-left: 20px;
+}
+.social{
+  float: right;
+  line-height: 90px;
+  margin-right: 20px;
+  font-size: 20px;
+}
+.fa{
+  color: #827070;
+  margin-right:30px;
+}
+.fa:hover {
+  color:#b06d6d;
+}
+/*END OF FOOTER
+---------------------------------------------------------------------- */
+
+/* MEDIA QUERIES for FOOTER
+----------------------------------------------------------------------       */
+@media (max-width:475px ) {
+
+.footer-col p{
+    font-size: 15px;
+    margin-left: 10px;
+}
+.social{
+  font-size: 15px;
+  line-height: 85px;
+}
+.fa{
+  margin-right:15px;
+}
+}
+@media (max-width:425px ) {
+
+.footer-col p{
+    font-size: 12px;
+    margin-left: 35px;
+}
+.social{
+  font-size: 15px;
+  line-height: 85px;
+}
+.fa{
+  margin-right:20px;
+}
+}
+@media (max-width:345px ) {
+
+.footer-col p{
+    font-size: 10px;
+    margin-left: 35px;
+}
+.social{
+  font-size: 12px;
+  line-height: 85px;
+}
+.fa{
+  margin-right:20px;
+}
+}
+@media (max-width:320px ) {
+
+.footer-col p{
+    font-size: 10px;
+    margin-left: 10px;
+}
+.social{
+  font-size: 13px;
+  line-height: 85px;
+}
+.fa{
+  margin-right:15px;
+}
+}
+/* END OF MEDIA QUERIES for FOOTER
+----------------------------------------------------------------------       */
